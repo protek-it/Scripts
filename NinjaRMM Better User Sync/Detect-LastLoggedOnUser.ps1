@@ -1,5 +1,5 @@
-# Function to set Ninja custom field
-function Set-NinjaCustomField {
+# Function to set Halo custom field
+function Set-HaloCustomField {
     param (
         [string]$fieldName,
         [string]$fieldValue
@@ -105,8 +105,8 @@ try {
 
     Write-Output "Most recent active profile: $($mostRecentProfile.UserName) with UPN: $($mostRecentProfile.UPN)"
 
-    # Set the Ninja custom field
-    Set-NinjaCustomField -fieldName "lastDetectedUser" -fieldValue $mostRecentProfile.UPN
+    # Set the Halo custom field
+    Set-HaloCustomField -fieldName "lastDetectedUser" -fieldValue $mostRecentProfile.UPN
 
     Write-Output "Successfully set lastDetectedUser to $($mostRecentProfile.UPN)"
 } catch {
